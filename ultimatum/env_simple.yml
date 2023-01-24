@@ -8,33 +8,33 @@ dependencies:
   - backports=1.0=py_2
   - backports.functools_lru_cache=1.6.4=pyhd8ed1ab_0
   - black=22.6.0=pyhd8ed1ab_0
-  - bzip2=1.0.8=h3422bc3_4
-  - c-ares=1.18.1=h3422bc3_0
-  - ca-certificates=2022.6.15=h4653dfc_0
+  - bzip2
+  - c-ares
+  - ca-certificates
   - dataclasses=0.8=pyhc8e2a94_3
-  - debugpy=1.6.3=py39h3c22d25_0
+  - debugpy
   - decorator=5.1.1=pyhd8ed1ab_0
   - entrypoints=0.4=pyhd8ed1ab_0
   - executing=0.10.0=pyhd8ed1ab_0
-  - grpc-cpp=1.48.0=h3045769_3
-  - grpcio=1.48.0=py39h4a64351_3
+  - grpc-cpp
+  - grpcio
   - ipykernel=6.15.1=pyh736e0ef_0
-  - ipython=8.4.0=py39h2804cbe_0
+  - ipython
   - jedi=0.18.1=pyhd8ed1ab_2
   - jupyter_client=7.3.4=pyhd8ed1ab_0
-  - jupyter_core=4.11.1=py39h2804cbe_0
-  - libabseil=20220623.0=cxx17_hc0b94f3_1
-  - libcxx=14.0.6=h04bba0f_0
-  - libffi=3.4.2=h3422bc3_5
-  - libprotobuf=3.20.1=hb558339_1
-  - libsodium=1.0.18=h27ca646_1
-  - libsqlite=3.39.2=h2c9beb0_1
-  - libzlib=1.2.12=ha287fd2_2
+  - jupyter_core
+  - libabseil
+  - libcxx
+  - libff
+  - libprotobuf
+  - libsodium
+  - libsqlite
+  - libzlib
   - matplotlib-inline=0.1.6=pyhd8ed1ab_0
-  - mypy_extensions=0.4.3=py39h2804cbe_5
-  - ncurses=6.3=h07bb92c_1
+  - mypy_extensions
+  - ncurses
   - nest-asyncio=1.5.5=pyhd8ed1ab_0
-  - openssl=3.0.5=h7aea29f_1
+  - openssl
   - packaging=21.3=pyhd8ed1ab_0
   - parso=0.8.3=pyhd8ed1ab_0
   - pathspec=0.9.0=pyhd8ed1ab_0
@@ -43,33 +43,33 @@ dependencies:
   - pip=22.2.2=pyhd8ed1ab_0
   - platformdirs=2.5.2=pyhd8ed1ab_1
   - prompt-toolkit=3.0.30=pyha770c72_0
-  - psutil=5.9.1=py39h9eb174b_0
+  - psutil
   - ptyprocess=0.7.0=pyhd3deb0d_0
   - pure_eval=0.2.2=pyhd8ed1ab_0
   - pygments=2.13.0=pyhd8ed1ab_0
   - pyparsing=3.0.9=pyhd8ed1ab_0
-  - python=3.9.13=h96fcbfb_0_cpython
+  - python=3.9.13
   - python-dateutil=2.8.2=pyhd8ed1ab_0
   - python_abi=3.9=2_cp39
-  - pyzmq=23.2.1=py39h59d144a_0
-  - re2=2022.06.01=h9a09cb3_0
-  - readline=8.1.2=h46ed386_0
-  - setuptools=65.0.2=py39h2804cbe_0
+  - pyzmq
+  - re2
+  - readline
+  - setuptools
   - six=1.16.0=pyh6c4a22f_0
-  - sqlite=3.39.2=h40dfcc0_1
+  - sqlite
   - stack_data=0.4.0=pyhd8ed1ab_0
-  - tk=8.6.12=he1e0b03_0
+  - tk
   - tomli=2.0.1=pyhd8ed1ab_0
-  - tornado=6.2=py39h9eb174b_0
+  - tornado
   - traitlets=5.3.0=pyhd8ed1ab_0
-  - typed-ast=1.5.4=py39h9eb174b_0
+  - typed-ast
   - typing_extensions=4.3.0=pyha770c72_0
   - tzdata=2022c=h191b570_0
   - wcwidth=0.2.5=pyh9f0ad1d_2
   - wheel=0.37.1=pyhd8ed1ab_0
-  - xz=5.2.6=h57fd34a_0
+  - xz
   - zeromq
-  - zlib=1.2.12=ha287fd2_2
+  - zlib
   - pip:
     - absl-py==1.2.0
     - aiosignal==1.2.0
