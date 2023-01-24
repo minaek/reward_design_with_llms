@@ -25,7 +25,6 @@ dependencies:
   - jupyter_core
   - libabseil
   - libcxx
-  - libff
   - libprotobuf
   - libsodium
   - libsqlite
