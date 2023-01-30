@@ -6,7 +6,7 @@ is_desirable = {0: "Yes", 1: "No"}
 
 def get_low_high_percentage_prompt(threshold):
     base_prompt = "P1 and P2 are playing the Ultimatum Game. P1 proposes how they should split $10  and P2 can either accept or reject. If P2 accepts, then the deal is done. If P2 rejects, then both parties get nothing. "
-    with open(f"ultimatum/low_high_percentage_{threshold}.pkl", "rb") as f:
+    with open(f"low_high_percentage_{threshold}.pkl", "rb") as f:
         data = pkl.load(f)
         train, test = data["train"], data["test"]
     prompts = []
@@ -24,7 +24,7 @@ def get_low_high_percentage_prompt(threshold):
 
 def get_low_high_payoff_prompt(threshold):
     base_prompt = "P1 and P2 are playing the Ultimatum Game. P1 proposes how they should split $10  and P2 can either accept or reject. If P2 accepts, then the deal is done. If P2 rejects, then both parties get nothing. "
-    with open(f"ultimatum/low_high_payoff_{threshold}.pkl", "rb") as f:
+    with open(f"low_high_payoff_{threshold}.pkl", "rb") as f:
         data = pkl.load(f)
         train, test = data["train"], data["test"]
     prompts = []
@@ -42,7 +42,7 @@ def get_low_high_payoff_prompt(threshold):
 
 def get_inequity_aversion_prompt():
     base_prompt = "P1 and P2 are playing the Ultimatum Game. P1 proposes how they should split $10  and P2 can either accept or reject. If P2 accepts, then the deal is done. If P2 rejects, then both parties get nothing. "
-    with open(f"ultimatum/inequity_aversion_None.pkl", "rb") as f:
+    with open(f"inequity_aversion_None.pkl", "rb") as f:
         data = pkl.load(f)
         train, test = data["train"], data["test"]
     prompts = []
@@ -69,7 +69,7 @@ def get_low_high_percentage_prompt_shorter(threshold):
         cot = f"P2 receives ${train[0][1]} < $6 so P2 should reject this offer. Therefore, the outcome is desirable"
     else:
         raise ValueError
-    with open(f"ultimatum/low_high_percentage_{threshold}.pkl", "rb") as f:
+    with open(f"low_high_percentage_{threshold}.pkl", "rb") as f:
         data = pkl.load(f)
         test = data["test"]
     prompts = []
@@ -96,7 +96,7 @@ def get_low_high_payoff_prompt_shorter(threshold):
         cot = f"P2 gets ${train[0][1]} but P2 thinks anything below $100 is not sizeable. {train[0][1]} is more than 100 so P2 should accept the offer. Therefore, the outcome is not desirable."
     else:
         raise ValueError
-    with open(f"ultimatum/low_high_payoff_{threshold}.pkl", "rb") as f:
+    with open(f"low_high_payoff_{threshold}.pkl", "rb") as f:
         data = pkl.load(f)
         test = data["test"]
     prompts = []
@@ -113,7 +113,7 @@ def get_low_high_payoff_prompt_shorter(threshold):
 
 def get_inequity_aversion_prompt_shorter():
     base_prompt = "P1 and P2 are playing the Ultimatum Game. P1 proposes how they should split $10  and P2 can either accept or reject. If P2 accepts, then the deal is done. If P2 rejects, then both parties get nothing. "
-    with open(f"ultimatum/inequity_aversion_None.pkl", "rb") as f:
+    with open(f"inequity_aversion_None.pkl", "rb") as f:
         data = pkl.load(f)
         test = data["test"]
     train = [[2.3, 7.7]]

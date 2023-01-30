@@ -67,9 +67,9 @@ def train_RL(train_path, test_path, seed=0):
 
 
 def evaluate_lm_responses(path):
-    with open(f"ultimatum/{path}.pkl", "rb") as f:
+    with open(f"{path}.pkl", "rb") as f:
         ground_truth = pkl.load(f)["test"]
-    with open(f"ultimatum/lm_responses/{path}.pkl", "rb") as f:
+    with open(f"lm_responses/{path}.pkl", "rb") as f:
         lm_responses = pkl.load(f)
 
     is_desirable_text2int = {"Yes": 0, "No": 1}
@@ -98,9 +98,9 @@ def evaluate_lm_responses(path):
 
 
 def evaluate_lm_responses_shorter(path):
-    with open(f"ultimatum/{path}.pkl", "rb") as f:
+    with open(f"{path}.pkl", "rb") as f:
         ground_truth = pkl.load(f)["test"]
-    with open(f"ultimatum/lm_responses_shorter/{path}.pkl", "rb") as f:
+    with open(f"lm_responses_shorter/{path}.pkl", "rb") as f:
         lm_responses = pkl.load(f)
 
     not_des_str = "Therefore, the outcome is not desirable"
@@ -141,16 +141,16 @@ def main(condition, shorter, num_seeds, model, thresholds):
         if model == "gpt3":
             if shorter:
                 evaluate_lm_responses_shorter(partial_path)
-                model_path = f"ultimatum/lm_responses_shorter/{partial_path}_train.pkl"
+                model_path = f"lm_responses_shorter/{partial_path}_train.pkl"
             else:
                 evaluate_lm_responses(partial_path)
-                model_path = f"ultimatum/lm_responses/{partial_path}_train.pkl"
+                model_path = f"lm_responses/{partial_path}_train.pkl"
         elif model == "sl":
             if shorter:
-                model_path = f"ultimatum/sl_responses_shorter/{partial_path}_train.pkl"
+                model_path = f"sl_responses_shorter/{partial_path}_train.pkl"
             else:
-                model_path = f"ultimatum/sl_responses/{partial_path}_train.pkl"
-        path = f"ultimatum/{partial_path}.pkl"
+                model_path = f"sl_responses/{partial_path}_train.pkl"
+        path = f"{partial_path}.pkl"
         means = []
         stds = []
         for seed in range(num_seeds):
